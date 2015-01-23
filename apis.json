@@ -1,7 +1,7 @@
 {
   "name": "Stack Network - Link",
   "description": "This is my default link API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
+  "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link.png",
   "tags": [
     "application programming interface",
     "API",
@@ -15,7 +15,7 @@
     {
       "name": "Link",
       "description": "A link API resource.",
-      "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
+      "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link.png",
       "humanURL": "https://kin-lane.github.io/link/",
       "baseURL": "http://link.api.kinlane.com",
       "tags": [
