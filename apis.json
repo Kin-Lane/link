@@ -1,0 +1,82 @@
+{
+  "name": "Stack Network - Link",
+  "description": "This is my default link API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
+  "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
+  "tags": [
+    "application programming interface",
+    "API",
+    "Link"
+  ],
+  "created": "2015-01-22",
+  "modified": "2015-01-22",
+  "url": "https://kin-lane.github.io/link/apis.json",
+  "SpecificationVersion": "0.14",
+  "apis": [
+    {
+      "name": "Link",
+      "description": "A link API resource.",
+      "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
+      "humanURL": "https://kin-lane.github.io/link/",
+      "baseURL": "http://link.api.kinlane.com",
+      "tags": [
+        "API",
+        "Application Programming Interface",
+        "Link"
+      ],
+      "properties": [
+        {
+          "type": "Swagger",
+          "url": "https://kin-lane.github.io/link/definitions/swagger.json"
+        }
+      ],
+      "contact": [
+        {
+          "FN": "API Evangliest",
+          "email": "info@apievangelist.com",
+          "X-twitter": "apievangelist"
+        }
+      ]
+    }
+  ],
+  "include": [
+    {
+      "name": "Master",
+      "url": "https://kin-lane.github.io/master/apis.json"
+    },  
+    {
+      "name": "Audio API",
+      "url": "https://kin-lane.github.io/audio/apis.json"
+    },
+    {
+      "name": "Blog API",
+      "url": "https://kin-lane.github.io/blog/apis.json"
+    },
+    {
+      "name": "Comment API",
+      "url": "https://kin-lane.github.io/comment/apis.json"
+    },
+    {
+      "name": "Image API",
+      "url": "https://kin-lane.github.io/image/apis.json"
+    },
+    {
+      "name": "Note API",
+      "url": "https://kin-lane.github.io/note/apis.json"
+    },
+    {
+      "name": "Page API",
+      "url": "https://kin-lane.github.io/page/apis.json"
+    },
+    {
+      "name": "Video API",
+      "url": "https://kin-lane.github.io/video/apis.json"
+    }     
+  ],
+  "maintainers": [
+    {
+      "FN": "API Evangliest",
+      "X-twitter": "apievangelist",
+      "email": "info@apievangelist.com"
+    }
+  ]
+}
