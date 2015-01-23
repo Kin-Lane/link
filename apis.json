@@ -1,5 +1,5 @@
 {
-  "name": "Stack Network - Link",
+  "name": "Kin Lane - Link",
   "description": "This is my default link API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
   "link": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link.png",
   "tags": [
