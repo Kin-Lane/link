@@ -1,21 +1,21 @@
 {
   "name": "Kin Lane - Link",
   "description": "This is my default link API, using it to manage posts in a single API. It is a Stack Network API resource, with supporting docker container for the API.",
-  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link.png",
+  "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
   "tags": [
     "application programming interface",
     "API",
     "Link"
   ],
-  "created": "2015-01-22",
-  "modified": "2015-01-22",
+  "created": "2014-04-07",
+  "modified": "2014-07-09",
   "url": "https://kin-lane.github.io/link/apis.json",
   "SpecificationVersion": "0.14",
   "apis": [
     {
       "name": "Link",
       "description": "A link API resource.",
-      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link.png",
+      "image": "https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-link-icon.png",
       "humanURL": "https://kin-lane.github.io/link/",
       "baseURL": "http://link.api.kinlane.com",
       "tags": [
@@ -25,9 +25,9 @@
       ],
       "properties": [
         {
-          "type": "Swagger",
-          "url": "https://kin-lane.github.io/link/definitions/swagger.json"
-        }
+          "type": "swagger",
+          "url": "https://kin-lane.github.io/link/swagger.json"
+        }      
       ],
       "contact": [
         {
@@ -48,10 +48,6 @@
       "url": "https://kin-lane.github.io/audio/apis.json"
     },
     {
-      "name": "Blog API",
-      "url": "https://kin-lane.github.io/blog/apis.json"
-    },    
-    {
       "name": "Comment API",
       "url": "https://kin-lane.github.io/comment/apis.json"
     },
@@ -71,6 +67,10 @@
       "name": "Job API",
       "url": "https://kin-lane.github.io/job/apis.json"
     },     
+    {
+      "name": "Link API",
+      "url": "https://kin-lane.github.io/link/apis.json"
+    },
     {
       "name": "Note API",
       "url": "https://kin-lane.github.io/note/apis.json"
@@ -106,7 +106,7 @@
     {
       "name": "Video API",
       "url": "https://kin-lane.github.io/video/apis.json"
-    }     
+    } 
   ],
   "maintainers": [
     {

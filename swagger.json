@@ -1,256 +1,455 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Instance",
-    "description": "This is a instance api",
+    "title": "Link",
+    "description": "This is an link for all my links. I use a single link system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
     "termsOfService": "http://stack.network/terms-of-service.html",
-    "version": "v1"
+    "version": "v2"
   },
-  "host": "instance.api.kinlane.com",
+  "host": "link.api.kinlane.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "produces": [
     "application/json"
   ],
   "paths": {
-    "/instance/": {
+    "/link/": {
       "get": {
-        "summary": "retrieves all instances",
-        "description": "pulls all instances, with filter by keyword",
-        "operationId": "getInstances",
+        "summary": "all links",
+        "description": "all links",
+        "operationId": "getLinks",
         "parameters": [
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "query",
             "in": "query",
-            "description": "a text query to search across instance",
-            "required": true,
+            "description": "a text query to search across link",
+            "required": false,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "instance response",
+            "description": "link response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/instance"
+                "$ref": "#/definitions/link"
               }
             }
           }
         },
         "tags": [
-          "instance",
-          "instanceging"
+          "Links"
         ]
       },
       "post": {
-        "summary": "add instance",
-        "description": "add a new instance",
-        "operationId": "addInstance",
+        "summary": "add a link post",
+        "description": "add a link post",
+        "operationId": "addLink",
         "parameters": [
           {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
             "name": "name",
-            "in": "query",
-            "description": "name of the instance",
+            "in": "formData",
+            "description": "name for the link",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
-            "in": "query",
-            "description": "description of the instance",
+            "in": "formData",
+            "description": "description of the link",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
-            "in": "query",
-            "description": "url for the instance",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "name": "tags",
-            "in": "query",
-            "description": "tags for the instance",
+            "in": "formData",
+            "description": "url for the link",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "instance response",
+            "description": "link response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/instance"
+                "$ref": "#/definitions/link"
               }
             }
           }
         },
         "tags": [
-          "instance",
-          "instanceging"
+          "Links"
         ]
       }
     },
-    "/instance/{slug}": {
+    "/link/{link_id}/": {
       "get": {
-        "summary": "Retrieve a instance using its slug",
-        "description": "Returns the instance detail",
-        "operationId": "getInstance",
+        "summary": "get link",
+        "description": "get link",
+        "operationId": "getLink",
         "parameters": [
           {
-            "name": "slug",
+            "name": "link_id",
             "in": "path",
-            "description": "slug for the instance, notice this is in the path, not a query variable",
+            "description": "the unique id for link entry",
             "required": true,
-            "type": "integer"
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "instance response",
+            "description": "link response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/instance"
+                "$ref": "#/definitions/link"
               }
             }
           }
         },
         "tags": [
-          "instance",
-          "instanceging"
+          "Links"
         ]
       },
       "put": {
-        "summary": "update instance",
-        "description": "update instance",
-        "operationId": "updateInstance",
+        "summary": "update link",
+        "description": "update link",
+        "operationId": "updateLink",
         "parameters": [
           {
-            "name": "slug",
+            "name": "link_id",
             "in": "path",
-            "description": "unique slug for the instance",
+            "description": "the unique id for the link",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the link",
             "required": true,
             "type": "string"
           },
           {
             "name": "name",
-            "in": "query",
-            "description": "name of the instance",
+            "in": "formData",
+            "description": "name for the link",
             "required": true,
             "type": "string"
           },
           {
             "name": "description",
-            "in": "query",
-            "description": "description of the instance",
+            "in": "formData",
+            "description": "description of the link",
             "required": true,
             "type": "string"
           },
           {
             "name": "url",
+            "in": "formData",
+            "description": "url for the link",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "link response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/link"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Links"
+        ]
+      },
+      "delete": {
+        "summary": "delete link",
+        "description": "delete link",
+        "operationId": "deleteLink",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "the unique id for link entry",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
             "in": "query",
-            "description": "url for the instance",
+            "description": "your appid for accessing the link",
             "required": true,
             "type": "string"
           },
           {
-            "name": "tags",
+            "name": "appkey",
             "in": "query",
-            "description": "tags for the instance",
+            "description": "your appkey for accessing the link",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "instance response",
+            "description": "link response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/instance"
+                "$ref": "#/definitions/link"
               }
             }
           }
         },
         "tags": [
-          "instance",
-          "instanceging"
+          "Links"
         ]
-      },
-      "delete": {
-        "summary": "delete instance",
-        "description": "deletes an instance",
-        "operationId": "deleteInstance",
+      }
+    },
+    "/link/{link_id}/tags/": {
+      "get": {
+        "summary": "link tags",
+        "description": "link tags",
+        "operationId": "getlinkTags",
         "parameters": [
           {
-            "name": "slug",
+            "name": "link_id",
             "in": "path",
-            "description": "unique slug for the instance",
+            "description": "id for link",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
             "required": true,
             "type": "string"
           }
         ],
         "responses": {
           "200": {
-            "description": "instance response",
+            "description": "Link Tags Response",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/instance"
+                "$ref": "#/definitions/tag"
               }
             }
           }
         },
         "tags": [
-          "instance",
-          "instanceging"
+          "Tags"
+        ]
+      },
+      "post": {
+        "summary": "add tag to link",
+        "description": "add tag to link",
+        "operationId": "addLinkTag",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "id for the link",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "query",
+            "description": "tag name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
+        ]
+      }
+    },
+    "/link/{link_id}/tags/{tag}": {
+      "delete": {
+        "summary": "delete link tag",
+        "description": "delete link tag",
+        "operationId": "deletelinkTag",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "id for the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "description": "tag to remove from link",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Link Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tag"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tags"
         ]
       }
     }
   },
   "definitions": {
-    "instance": {
+    "link": {
       "properties": {
+        "link_id": {
+          "description": "unique id of the link",
+          "type": "integer",
+          "format": "id"
+        },
         "name": {
-          "description": "name of the instance",
+          "description": "name for the link",
           "type": "string"
         },
         "description": {
-          "description": "description of the instance",
+          "description": "description of the link",
           "type": "string"
         },
         "url": {
-          "description": "url for the instance",
-          "type": "string"
-        },
-        "tags": {
-          "description": "tags for the instance",
-          "type": "string"
-        },
-        "slug": {
-          "description": "slug for the instance",
+          "description": "url for the link",
           "type": "string"
         }
       }
     },
-    "errorModel": {
-      "required": [
-        "code",
-        "message"
-      ],
+    "tag": {
       "properties": {
-        "code": {
+        "tag_id": {
+          "description": "id for the tag",
           "type": "integer",
-          "format": "int32"
+          "format": "id"
         },
-        "message": {
+        "tag": {
+          "description": "text tag",
           "type": "string"
+        },
+        "api_count": {
+          "description": "number of items api with tag",
+          "type": "integer"
         }
       }
     }
