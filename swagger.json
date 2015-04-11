@@ -59,8 +59,8 @@
         ]
       },
       "post": {
-        "summary": "add a link post",
-        "description": "add a link post",
+        "summary": "add a link",
+        "description": "add a link",
         "operationId": "addLink",
         "parameters": [
           {
