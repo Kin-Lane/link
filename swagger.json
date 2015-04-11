@@ -15,7 +15,7 @@
     "application/json"
   ],
   "paths": {
-    "/link/": {
+    "/links/": {
       "get": {
         "summary": "all links",
         "description": "all links",
@@ -115,7 +115,7 @@
         ]
       }
     },
-    "/link/{link_id}/": {
+    "/links/{link_id}/": {
       "get": {
         "summary": "get link",
         "description": "get link",
@@ -267,7 +267,7 @@
         ]
       }
     },
-    "/link/{link_id}/tags/": {
+    "/links/{link_id}/tags/": {
       "get": {
         "summary": "link tags",
         "description": "link tags",
@@ -362,7 +362,7 @@
         ]
       }
     },
-    "/link/{link_id}/tags/{tag}": {
+    "/links/{link_id}/tags/{tag}": {
       "delete": {
         "summary": "delete link tag",
         "description": "delete link tag",
