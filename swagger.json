@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Link",
-    "description": "This is an link for all my links. I use a single link system to manage all my sites. Based upon tagging, I then publish each post out to its respective Github Page based repo.",
+    "description": "This is an link for all my links. I use a single link system to manage all my sites.",
     "termsOfService": "http://stack.network/terms-of-service.html",
     "version": "v2"
   },
