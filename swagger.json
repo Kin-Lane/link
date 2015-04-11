@@ -115,6 +115,166 @@
         ]
       }
     },
+    "/link/{link_id}/screenshots/": {
+      "get": {
+        "summary": "retrieve link screenshots",
+        "description": "retrieve link screenshots",
+        "operationId": "getOrganizationScreenshots",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "id for link",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Screenshot Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/screenshot"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      },
+      "post": {
+        "summary": "add screenshots to link",
+        "description": "add screenshots for link",
+        "operationId": "addOrganizationScreenshot",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "id for the link",
+            "required": true,
+            "type": "integer",
+            "format": "id"
+          },
+          {
+            "name": "appid",
+            "in": "formData",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "formData",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "formData",
+            "description": "image path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "in": "formData",
+            "description": "image type",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "formData",
+            "description": "image name",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Screenshot Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/screenshot"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      }
+    },
+    "/link/{link_id}/screenshots/{link_screenshot_id}": {
+      "delete": {
+        "summary": "delete a link screenshot",
+        "description": "delete a link screenshot",
+        "operationId": "deleteOrganizationScreenshot",
+        "parameters": [
+          {
+            "name": "link_id",
+            "in": "path",
+            "description": "id for the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appid",
+            "in": "query",
+            "description": "your appid for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "appkey",
+            "in": "query",
+            "description": "your appkey for accessing the link",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "link_screenshot_id",
+            "in": "path",
+            "description": "id of the screenshot to remove from link",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Organization Tag Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/screenshot"
+              }
+            }
+          }
+        },
+        "tags": [
+          "Screenshots"
+        ]
+      }
+    },    
     "/links/{link_id}/": {
       "get": {
         "summary": "get link",
