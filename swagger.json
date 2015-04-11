@@ -596,6 +596,32 @@
         }
       }
     },
+    "screenshot": {
+      "properties": {
+        "api_id": {
+          "description": "id for the API",
+          "type": "integer",
+          "format": "id"
+        },
+        "link_screenshot_id": {
+          "description": "id for the screenshot",
+          "type": "integer",
+          "format": "id"
+        },
+        "name": {
+          "description": "name of the screenshot",
+          "type": "string"
+        },
+        "path": {
+          "description": "path of the screenshot",
+          "type": "string"
+        },
+        "type": {
+          "description": "type of screenshot",
+          "type": "string"
+        }
+      }
+    },    
     "tag": {
       "properties": {
         "tag_id": {
