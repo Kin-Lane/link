@@ -56,6 +56,14 @@
         },
         "tags": [
           "Links"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       },
       "post": {
@@ -112,6 +120,14 @@
         },
         "tags": [
           "Links"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
     },
@@ -157,6 +173,14 @@
         },
         "tags": [
           "Screenshots"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       },
       "post": {
@@ -221,6 +245,14 @@
         },
         "tags": [
           "Screenshots"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
     },
@@ -272,9 +304,17 @@
         },
         "tags": [
           "Screenshots"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
-    },    
+    },
     "/links/{link_id}/": {
       "get": {
         "summary": "get link",
@@ -317,6 +357,14 @@
         },
         "tags": [
           "Links"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       },
       "put": {
@@ -381,6 +429,14 @@
         },
         "tags": [
           "Links"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       },
       "delete": {
@@ -424,6 +480,14 @@
         },
         "tags": [
           "Links"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
     },
@@ -469,6 +533,14 @@
         },
         "tags": [
           "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       },
       "post": {
@@ -519,6 +591,14 @@
         },
         "tags": [
           "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
     },
@@ -570,8 +650,28 @@
         },
         "tags": [
           "Tags"
+        ],
+        "security": [
+          {
+            "appid": []
+          },
+          {
+            "appkey": []
+          }
         ]
       }
+    }
+  },
+  "securityDefinitions": {
+    "appid": {
+      "type": "apiKey",
+      "name": "appid",
+      "in": "query"
+    },
+    "appkey": {
+      "type": "apiKey",
+      "name": "appkey",
+      "in": "query"
     }
   },
   "definitions": {
@@ -621,7 +721,7 @@
           "type": "string"
         }
       }
-    },    
+    },
     "tag": {
       "properties": {
         "tag_id": {
