@@ -1,0 +1,1 @@
+<?php$route = '/links/:link_id/';$app->delete($route, function ($link_id) use ($app){	$Add = 1;	$ReturnObject = array(); 	$request = $app->request(); 	$_POST = $request->params();	$query = "DELETE FROM links WHERE link_id = " . $link_id;	//echo $query . "<br />";	mysql_query($query) or die('Query failed: ' . mysql_error());	});?>
