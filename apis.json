@@ -25,9 +25,20 @@
       ],
       "properties": [
         {
-          "type": "swagger",
+          "type": "Swagger",
           "url": "https://kin-lane.github.io/link/swagger.json"
-        }      
+        },
+        {
+          "type": "x-postman",
+          "url": "https://kin-lane.github.io/link/postman.json"
+        },
+        {
+          "type": "x-apimatic-sdks",
+          "url": "https://kin-lane.github.io/link/code/"
+        },
+        {
+          "type": "x-api-science",
+          "      
       ],
       "contact": [
         {
@@ -42,7 +53,7 @@
     {
       "name": "API API (Inception)",
       "url": "https://kin-lane.github.io/api/apis.json"
-    },   
+    },
     {
       "name": "Audio API",
       "url": "https://kin-lane.github.io/audio/apis.json"
@@ -54,11 +65,11 @@
     {
       "name": "Curated API",
       "url": "https://kin-lane.github.io/curated/apis.json"
-    },     
+    },
     {
       "name": "Glossary API",
       "url": "https://kin-lane.github.io/glossary/apis.json"
-    },     
+    },
     {
       "name": "Image API",
       "url": "https://kin-lane.github.io/image/apis.json"
@@ -66,7 +77,7 @@
     {
       "name": "Job API",
       "url": "https://kin-lane.github.io/job/apis.json"
-    },     
+    },
     {
       "name": "Link API",
       "url": "https://kin-lane.github.io/link/apis.json"
@@ -78,7 +89,7 @@
     {
       "name": "Organization API",
       "url": "https://kin-lane.github.io/organization/apis.json"
-    },     
+    },
     {
       "name": "Page API",
       "url": "https://kin-lane.github.io/page/apis.json"
@@ -86,11 +97,11 @@
     {
       "name": "Patent API",
       "url": "https://kin-lane.github.io/patent/apis.json"
-    },    
+    },
     {
       "name": "People API",
       "url": "https://kin-lane.github.io/people/apis.json"
-    },     
+    },
     {
       "name": "Project API",
       "url": "https://kin-lane.github.io/project/apis.json"
@@ -98,15 +109,15 @@
     {
       "name": "Tag API",
       "url": "https://kin-lane.github.io/tag/apis.json"
-    },      
+    },
     {
       "name": "Tool API",
       "url": "https://kin-lane.github.io/tool/apis.json"
-    },         
+    },
     {
       "name": "Video API",
       "url": "https://kin-lane.github.io/video/apis.json"
-    } 
+    }
   ],
   "maintainers": [
     {
